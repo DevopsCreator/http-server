@@ -1,12 +1,9 @@
 package file
 
-import "github.com/DevopsCreator/http-server/internal/model/common"
-
-type Extension string
-type Integrity bool // Целостность
-
-type File struct {
-	Extension
-	common.Path
-	Integrity
+type File struct{
+	Name string
+	Type string
+	LastTimeChanges int
+	ReRead bool // Если ReRead false, перечитать файл в память и поменять LastTimeChanges 
+	CacheTime int
 }
