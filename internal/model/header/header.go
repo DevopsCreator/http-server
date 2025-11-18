@@ -1,4 +1,4 @@
-package header
+package model
 
 
 type Header struct{
